@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './Collaborate.css'
 
 function Collaborate() {
@@ -9,6 +9,18 @@ function Collaborate() {
     projectIdea: ''
   })
   const [submitted, setSubmitted] = useState(false)
+
+  useEffect(() => {
+    let timeoutId
+    if (submitted) {
+      timeoutId = setTimeout(() => setSubmitted(false), 5000)
+    }
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+      }
+    }
+  }, [submitted])
 
   const handleChange = (e) => {
     setFormData({
@@ -21,7 +33,6 @@ function Collaborate() {
     e.preventDefault()
     setSubmitted(true)
     setFormData({ name: '', email: '', creatorType: '', projectIdea: '' })
-    setTimeout(() => setSubmitted(false), 5000)
   }
 
   return (
