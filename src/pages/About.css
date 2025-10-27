@@ -1,0 +1,59 @@
+.about {
+  width: 100%;
+  min-height: calc(100vh - 200px);
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.about h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.about-content section {
+  margin-bottom: 3rem;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #667eea;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.value-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.value-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.value-item p {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin: 0;
+}
