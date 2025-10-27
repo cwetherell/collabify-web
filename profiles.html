@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" data-page="profile">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Profile — Collabify</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="profile">
+  <header class="nav"><div class="container"><a class="brand" href="index.html">Collabify</a><nav><a href="browse.html">Browse</a><a href="profiles.html">My Profile</a></nav></div></header>
+
+  <main class="container">
+    <h1>My Profile</h1>
+    <div class="card">
+      <div class="form-row">
+        <label style="min-width:90px">Name</label>
+        <input id="p-name" class="input" placeholder="Your display name" />
+      </div>
+      <div class="form-row">
+        <label style="min-width:90px">Bio</label>
+        <textarea id="p-bio" class="input" rows="3" placeholder="Short bio"></textarea>
+      </div>
+      <div class="form-row">
+        <label style="min-width:90px">Twitch</label>
+        <input id="p-twitch" class="input" placeholder="https://twitch.tv/yourname" />
+      </div>
+      <div class="form-row">
+        <label style="min-width:90px">YouTube</label>
+        <input id="p-youtube" class="input" placeholder="https://youtube.com/channel/..." />
+      </div>
+      <div class="form-row">
+        <label style="min-width:90px">Discord</label>
+        <input id="p-discord" class="input" placeholder="username#1234" />
+      </div>
+      <div class="form-row">
+        <label style="min-width:90px">Status</label>
+        <select id="p-status" class="input">
+          <option value="looking">Looking for collabs</option>
+          <option value="not_looking">Not looking</option>
+          <option value="busy">Busy</option>
+        </select>
+      </div>
+      <div style="display:flex;gap:12px;justify-content:flex-end;margin-top:12px">
+        <button id="save-profile" class="btn">Save Profile</button>
+      </div>
+    </div>
+
+    <section style="margin-top:18px">
+      <h2>Upcoming Collaborations</h2>
+      <div class="card">
+        <div class="form-row">
+          <input id="s-title" class="input" placeholder="Collab title" />
+          <input id="s-date" type="date" class="input" style="max-width:180px" />
+          <button id="add-schedule" class="btn">Add</button>
+        </div>
+        <div id="schedule" style="margin-top:12px"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container">&copy; Collabify — Demo site</div></footer>
+  <script src="app.js"></script>
+</body>
+</html>
