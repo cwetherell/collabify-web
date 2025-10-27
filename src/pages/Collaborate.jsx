@@ -8,6 +8,7 @@ function Collaborate() {
     creatorType: '',
     projectIdea: ''
   })
+  const [submitted, setSubmitted] = useState(false)
 
   const handleChange = (e) => {
     setFormData({
@@ -18,8 +19,9 @@ function Collaborate() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    alert('Thank you for your interest! We will be in touch soon.')
+    setSubmitted(true)
     setFormData({ name: '', email: '', creatorType: '', projectIdea: '' })
+    setTimeout(() => setSubmitted(false), 5000)
   }
 
   return (
@@ -115,6 +117,11 @@ function Collaborate() {
               <button type="submit" className="submit-button">
                 Join the Waitlist
               </button>
+              {submitted && (
+                <div className="success-message">
+                  Thank you for your interest! We will be in touch soon.
+                </div>
+              )}
             </form>
           </section>
         </div>

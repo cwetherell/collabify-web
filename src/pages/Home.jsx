@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom'
 import './Home.css'
 
 function Home() {
+  const navigate = useNavigate()
   return (
     <div className="home">
       <section className="hero">
@@ -12,7 +14,7 @@ function Home() {
             Whether you're a musician, artist, writer, or video creator, Collabify
             provides the perfect platform for your next collaboration.
           </p>
-          <button className="cta-button">Get Started</button>
+          <button className="cta-button" onClick={() => navigate('/collaborate')}>Get Started</button>
         </div>
       </section>
 
